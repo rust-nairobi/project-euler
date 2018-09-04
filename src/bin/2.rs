@@ -1,11 +1,17 @@
 //145 is an interesting number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
 //Find the sum of all numbers which are equal to the sum of the factorial of their digits.
 //Note: as 1! = 1 and 2! = 2 are not sums they are not included.
+
 //Challenges
 // 1. Rust is statically typed language. It expects types. With fibonanci 
 // the error is eminent when you attempt to multiply with overflow
 // 2. Comparing the resulting factorial with the number
 // 3. Writing its test
+
+// # Nice to have:
+// I would have loved to iterate over the characters of string 
+// and convert and add them using fold
+
 #[warn(unused_imports)]
 fn factorial_function(num: i32) -> i32 {
     match num {
