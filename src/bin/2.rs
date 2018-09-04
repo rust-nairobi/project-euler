@@ -29,3 +29,8 @@ fn main() {
         }
     }
 }
+
+#[test]
+fn test() {
+    assert_eq!(factorial_function(2), 2);
+}
