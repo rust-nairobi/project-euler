@@ -1,1 +1,0 @@
-/Users/kenneth.marete/otherprojects/rustyprogramming/project-euler/my-project-euler/target/debug/34-6bd608e62ed165bf.dSYM: /Users/kenneth.marete/otherprojects/rustyprogramming/project-euler/my-project-euler/src/bin/34.rs
