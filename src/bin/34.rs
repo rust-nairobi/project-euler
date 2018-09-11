@@ -2,16 +2,6 @@
 //Find the sum of all numbers which are equal to the sum of the factorial of their digits.
 //Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 
-//Challenges
-// 1. Rust is statically typed language. It expects types. With fibonanci 
-// the error is eminent when you attempt to multiply with overflow
-// 2. Comparing the resulting factorial with the number
-// 3. Writing its test
-
-// # Nice to have:
-// I would have loved to iterate over the characters of string 
-// and convert and add them using fold
-
 #[warn(unused_imports)]
 fn factorial_function(num: i32) -> i32 {
     match num {
@@ -20,23 +10,37 @@ fn factorial_function(num: i32) -> i32 {
     }
 }
 
-fn main() {
-    for i in 10..10000 {
+fn compute_sum(a: i32, b: i32) -> i32 {
+   let mut total = 0;
+   for i in a..b {
         let mut sum = 0;
         let x = i.to_string();
         for y in x.chars(){
            let z = (y.to_string()).parse::<i32>().unwrap(); 
            sum += factorial_function(z);
         }
-        //println!("{}! = {}", i, sum);
 
         if i == sum {
-           println!("An interesting number here sum of {} factorials = {}", i, sum); 
+           total +=sum;
         }
     }
+    return total;
+}
+
+fn main() {
+    let start: i32 = 0;
+    let end: i32 = 1_000_000; 
+    let result = compute_sum(start, end); 
+    println!("Sum of all numbers : {}", result);
 }
 
 #[test]
-fn test() {
-    assert_eq!(factorial_function(2), 2);
+fn test_factorial() {
+    assert_eq!(factorial_function(3), 6);
 }
+
+#[test]
+fn test_compute_sum(){
+    assert_eq!(compute_sum(3, 1000), 145);
+}
+
