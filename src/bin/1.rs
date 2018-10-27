@@ -5,7 +5,7 @@
 ///
 /// Find the sum of all the multiples of 3 or 5 below 1000.
 
-fn sum_multiples_3_5(n: i32) -> i32 {
+fn problem_1_sol_1(n: i32) -> i32 {
     let sum = (0..n).filter(|x| x % 3 == 0 || x % 5 == 0).sum();
 
     sum
@@ -30,11 +30,11 @@ pub fn problem_1_sol_2(limit: i32) -> i32 {
 fn main() {
     println!(
         "the sum of all the multiples of 3 or 5 below 10: {}",
-        sum_multiples_3_5(10)
+        problem_1_sol_1(10)
     );
     println!(
         "the sum of all the multiples of 3 or 5 below 1000: {}",
-        sum_multiples_3_5(1000)
+        problem_1_sol_1(1000)
     );
     print!("Using problem_1_sol_2:");
     print!(
@@ -45,8 +45,8 @@ fn main() {
 
 #[test]
 fn test() {
-    assert_eq!(sum_multiples_3_5(10), 23);
-    assert_eq!(sum_multiples_3_5(1000), 233168);
+    assert_eq!(problem_1_sol_1(10), 23);
+    assert_eq!(problem_1_sol_1(1000), 233168);
 }
 
 #[test]
