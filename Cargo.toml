@@ -4,3 +4,5 @@ version = "0.1.0"
 authors = ["ghost <mattgathu@gmail.com>"]
 
 [dependencies]
+num-bigint = "0.2.0"
+num-traits = "0.2.5"
